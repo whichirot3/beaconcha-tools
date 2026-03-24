@@ -1,0 +1,71 @@
+name: Bug report
+description: Report a defect in daemon, desktop UI, operations, or packaging.
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is broken and what did you expect?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - daemon
+        - desktop-ui
+        - tauri-shell
+        - keymanager
+        - operations
+        - docs
+        - ci/cd
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Include error code, API response, and relevant logs.
+      render: shell
+
+  - type: input
+    id: version
+    attributes:
+      label: App/commit version
+      placeholder: e.g. 0.1.0 / commit SHA
+
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: Ubuntu 24.04 / macOS 15 / Windows 11

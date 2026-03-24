@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'Quantico';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/quantico-400-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Quantico';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/quantico-700-latin.woff2') format('woff2');
+}
+
+:root {
+  color-scheme: light;
+  --font-ui: 'Quantico', 'Segoe UI', sans-serif;
+  --font-display: 'Quantico', 'Segoe UI', sans-serif;
+  --font-brand: 'Quantico', 'Segoe UI', sans-serif;
+
+  --surface: #e7e7e4;
+  --panel: #f1f1ee;
+  --panel-solid: #f8f8f5;
+  --text: #1f2220;
+  --text-dim: #676d68;
+  --line: #d3d4cf;
+  --line-strong: #bfc2bb;
+  --accent: rgb(247, 163, 92);
+  --flow-active: #6f88c7;
+  --success: #3f9465;
+  --warning: #c48a47;
+  --critical: #b36262;
+  --panel-shadow: 0 12px 26px rgba(30, 33, 31, 0.06);
+  --transition-base: 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --surface: #181c1f96;
+  --panel: #292f33;
+  --panel-solid: #252731;
+  --text: #ecefea;
+  --text-dim: #a1a89f;
+  --line: #3c3f3e;
+  --line-strong: #4e585e;
+  --accent: rgb(247, 163, 92);
+  --flow-active: #8cacf2;
+  --success: #6f8fd9;
+  --warning: #d8a264;
+  --critical: #c87575;
+  --panel-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-family: var(--font-ui);
+  color: var(--text);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}

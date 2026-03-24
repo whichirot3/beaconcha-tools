@@ -1,0 +1,48 @@
+[daemon]
+bind_addr = "127.0.0.1:8742"
+poll_interval_seconds = 12
+request_timeout_ms = 8000
+max_retries = 2
+cache_ttl_seconds = 8
+database_path = "./data/beaconops.db"
+log_directory = "./data/logs"
+
+[beacon]
+endpoints = [
+  { name = "PublicNode Beacon", url = "https://ethereum-beacon-api.publicnode.com" },
+  { name = "Lodestar", url = "https://lodestar-mainnet.chainsafe.io" },
+]
+
+[execution]
+endpoints = [
+  { name = "Cloudflare", url = "https://cloudflare-eth.com" },
+  { name = "PublicNode EL", url = "https://ethereum-rpc.publicnode.com" },
+]
+
+[keymanager]
+request_timeout_ms = 5000
+endpoints = []
+# endpoints = [
+#   { name = "Lighthouse VC", url = "http://127.0.0.1:7500", auth_token = "" },
+# ]
+
+[telegram]
+enabled = false
+bot_token = ""
+chat_id = ""
+min_severity = "warning"
+quiet_hours_start = 23
+quiet_hours_end = 7
+heartbeat_minutes = 30
+digest_hour_utc = 6
+anti_spam_window_seconds = 300
+
+[observability]
+telemetry_opt_in = false
+crash_reporting_opt_in = false
+
+# Optional bootstrap validator targets.
+# In normal desktop flow validators are imported from onboarding.
+# [[validators]]
+# id = "62936"
+# label = "Primary Validator"

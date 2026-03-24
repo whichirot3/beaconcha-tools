@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Beaconcha Tools",
+  "version": "0.1.0",
+  "identifier": "io.beaconcha.tools.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:5174",
+    "beforeBuildCommand": "npm run build && npm run prepare:daemon",
+    "frontendDist": "../dist"
+  },
+  "bundle": {
+    "active": true,
+    "resources": ["bin/*"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/64x64.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Beaconcha Tools",
+        "width": 1125,
+        "height": 780,
+        "minWidth": 1130,
+        "minHeight": 700,
+        "resizable": true,
+        "fullscreen": false,
+        "visible": false,
+        "center": true
+      },
+      {
+        "label": "gate",
+        "title": "Beaconcha Tools Access",
+        "url": "/?view=gate",
+        "width": 620,
+        "height": 350,
+        "resizable": false,
+        "fullscreen": false,
+        "decorations": false,
+        "alwaysOnTop": true,
+        "center": true
+      }
+    ]
+  }
+}
