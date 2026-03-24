@@ -14,6 +14,9 @@ Beaconcha Tools is an Ethereum validator operations stack with two deliverables:
 - Delivers operator-focused diagnostics, incident timeline, and Telegram alerting with anti-spam controls.
 - Exposes a local daemon API for desktop UI and external automation.
 
+<img width="1197" height="757" alt="image" src="https://github.com/user-attachments/assets/5e6df29d-93b1-47e0-9a10-10194cdeb108" />
+
+
 ## Why It Is Useful
 
 - Replaces fragmented scripts and dashboards with one operator control plane.
