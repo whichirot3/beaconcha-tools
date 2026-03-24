@@ -5,14 +5,19 @@ Beaconcha Tools is an Ethereum validator operations stack with two deliverables:
 - `beaconops-daemon` (Rust): 24/7 monitoring, incident pipeline, Telegram alerting, local API.
 - Desktop app (React/TypeScript + optional Tauri shell): onboarding, dashboards, operations, diagnostics.
 
+## Platform Availability
+
+- Official desktop support: **Windows** and **Linux**.
+- This repository may run checks on other environments for portability, but release target is Windows/Linux desktop systems.
+
 ## What It Does
 
-- Monitors validator runtime using public Beacon API + Execution JSON-RPC (heads, epochs, health, incidents).
-- Maintains validator inventory with identity, balance, status, withdrawal credentials, and action eligibility.
-- Provides action workflows: `0x00 -> 0x01`, voluntary exit, and execution-layer action preflight/submit paths.
+- Monitors validator runtime via public Beacon API + Execution JSON-RPC (heads, epochs, health, incidents).
+- Maintains validator inventory: identity, balance, status, withdrawal credentials, and action eligibility.
+- Provides operational workflows: `0x00 -> 0x01`, voluntary exit, execution-layer preflight/submit.
 - Integrates with Keymanager API for keystore and remote signer lifecycle operations.
-- Delivers operator-focused diagnostics, incident timeline, and Telegram alerting with anti-spam controls.
-- Exposes a local daemon API for desktop UI and external automation.
+- Provides diagnostics, incident timeline, and Telegram alerting with anti-spam controls.
+- Exposes a local daemon API for desktop UI and automation.
 
 <img width="1197" height="757" alt="image" src="https://github.com/user-attachments/assets/5e6df29d-93b1-47e0-9a10-10194cdeb108" />
 
@@ -21,7 +26,7 @@ Beaconcha Tools is an Ethereum validator operations stack with two deliverables:
 
 - Replaces fragmented scripts and dashboards with one operator control plane.
 - Reduces risk during validator operations through preflight checks, dry-run flows, and explicit error handling.
-- Works in public-infrastructure mode, so teams can operate without mandatory self-hosted nodes.
+- Works in public-infrastructure mode, without mandatory self-hosted nodes.
 - Improves incident response with unified timelines, endpoint health visibility, and actionable diagnostics.
 - Supports scaling from single-validator setups to grouped fleet operations (node/cluster/operator contexts).
 
@@ -116,7 +121,7 @@ GitHub Actions workflow includes:
 - Frontend lint/typecheck/tests/build
 - Smoke, chaos, perf gates
 - Security scan (`cargo audit`, `npm audit`)
-- Cross-platform packaging smoke
+- Multi-OS packaging smoke checks
 
 See `.github/workflows/ci.yml`.
 
