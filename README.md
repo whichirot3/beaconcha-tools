@@ -1,5 +1,7 @@
 # Beaconcha Tools
 
+Official domain: [beaconchatools.in](https://beaconchatools.in)
+
 Beaconcha Tools is an Ethereum validator operations stack with two deliverables:
 
 - `beaconops-daemon` (Rust): 24/7 monitoring, incident pipeline, Telegram alerting, local API.
