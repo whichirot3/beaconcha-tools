@@ -15,7 +15,7 @@ authors = ["Beaconcha Tools Team"]
 anyhow = "1.0"
 axum = { version = "0.8", features = ["macros"] }
 chrono = { version = "0.4", features = ["serde"] }
-clap = { version = "4.5", features = ["derive"] }
+clap = { version = "4.6", features = ["derive"] }
 dashmap = "6.1"
 reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json", "gzip", "hickory-dns"] }
 rusqlite = { version = "0.37", features = ["bundled", "chrono"] }
